@@ -1,0 +1,10 @@
+/* src/App.module.css */
+.App {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+  }
+  
+  main {
+    padding-top: 80px; /* Adjust based on Header height */
+  }

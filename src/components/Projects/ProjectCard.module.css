@@ -1,0 +1,73 @@
+/* Card Styling */
+.card {
+  background-color: #ffffff; /* White background for a clean look */
+  border-radius: 20px; /* Increased rounding for a softer appearance */
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for card */
+.card:hover {
+  transform: translateY(-8px); /* Subtle lift effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+}
+
+/* Image Styling */
+.image {
+  width: 100%;
+  height: 240px; /* Increased height for better visual impact */
+  object-fit: cover;
+  border-top-left-radius: 20px; /* Rounded corners for images */
+  border-top-right-radius: 20px; /* Consistent rounding */
+  transition: transform 0.3s ease;
+}
+
+/* Image hover effect */
+.card:hover .image {
+  transform: scale(1.1); /* More pronounced zoom on hover */
+}
+
+/* Info Section */
+.info {
+  padding: 2rem; /* Increased padding for better spacing */
+  background-color: #f0f4f8; /* Softer, lighter background color for contrast */
+}
+
+.info h3 {
+  font-size: 2rem; /* Larger font size for headings */
+  margin-bottom: 1rem; /* Reduced margin for better spacing */
+  color: #222; /* Darker color for better readability */
+  text-align: left; /* Align text to the left for better flow */
+}
+
+.info p {
+  font-size: 1.1rem; /* Standard font size for readability */
+  margin-bottom: 1.5rem; /* Slightly increased margin for spacing */
+  color: #444; /* Softer text color that maintains contrast */
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block; /* Ensure button behaves like a block */
+  text-decoration: none;
+  color: #ffffff; /* White text for contrast */
+  background-color: #3b82f6; /* Brighter blue for the button */
+  padding: 0.8rem 1.5rem; /* Increased padding for prominence */
+  border-radius: 25px; /* Rounded edges for a softer look */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Added shadow for a subtle 3D effect */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+/* Button hover effect */
+.btn:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+}
+
+/* Button active state */
+.btn:active {
+  background-color: #1e40af; /* Darker blue for active state */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Darker shadow for active state */
+}

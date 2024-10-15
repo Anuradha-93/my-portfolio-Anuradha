@@ -1,0 +1,159 @@
+:root {
+  --primary-color: #1e90ff; /* Bright blue for better contrast */
+  --secondary-color: #2c3e50; /* Darker background */
+  --text-color: #ecf0f1; /* Lighter text color for readability */
+  --text-light: #bdc3c7; /* Even lighter variant for subtle text */
+  --background-transparent: rgba(44, 62, 80, 0.0); /* Transparent dark background */
+  --background-scrolled: #34495e; /* Darker background on scroll */
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for contrast */
+  --transition-speed: 0.3s;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global Styles for Consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #1c1f24; /* Darker background for dark theme */
+  color: var(--text-color); /* Default text color */
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--background-transparent);
+  transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  z-index: 1000;
+}
+
+/* Header Background After Scrolling */
+.header.scrolled {
+  background-color:white;
+  box-shadow: var(--box-shadow);
+}
+.header.scrolled .navLinks li a {
+  color: #2c3e50;
+}
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+
+/* Logo Styles */
+.logo a {
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: white;
+  transition: color var(--transition-speed) ease;
+}
+
+.logo a:hover {
+  color: var(--primary-color);
+}
+
+/* Navigation Links Container */
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  
+}
+}
+.header.scrolled .logo a{
+  color: #2c3e50;
+}
+/* Individual Navigation Link Styles */
+.navLinks li a {
+  text-decoration: none;
+  color: #ecf0f1;;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.navLinks li a:hover,
+.navLinks li a:focus {
+  color: var(--primary-color);
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+  transition: color var(--transition-speed) ease;
+}
+.header.scrolled .hamburger{
+  color:#2c3e50;
+}
+.hamburger:hover,
+.hamburger:focus {
+  color: var(--primary-color);
+  outline: none;
+}
+
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  /* Show Hamburger Icon */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide Navigation Links by Default */
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background-color: var(--secondary-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right var(--transition-speed) ease;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show Navigation Links When Active */
+  .navLinks.active {
+    right: 0;
+  }
+
+  /* Navigation Links Spacing in Mobile */
+  .navLinks li {
+    margin: 1.5rem 0;
+  }
+
+  /* Increase Font Size for Mobile Navigation Links */
+  .navLinks li a {
+    font-size: 1.25rem;
+    color: var(--text-light);
+  }
+}
+
+/* Accessibility Enhancements */
+.navLinks li a:focus {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Smooth Scrolling for In-Page Links */
+.navLinks li a {
+  scroll-behavior: smooth;
+}

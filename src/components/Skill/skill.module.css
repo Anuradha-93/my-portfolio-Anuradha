@@ -1,0 +1,97 @@
+/* Skill.module.css */
+
+.skills {
+    padding: 4rem 2rem; /* Standard padding */
+    background: linear-gradient(135deg, #b0c4de, #a9b9c5); /* Darker gradient background */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px; /* Rounded corners for the section */
+}
+
+h2 {
+    font-size: 2.5rem; /* Appropriate size for heading */
+    margin-bottom: 2rem;
+    color: #fdfeff; /* Darker text for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.skillContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Spacing between items */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skillItem {
+    background-color: #ffffff; /* Clean white background for items */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem; /* Padding for better spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* To hide overflow for animations */
+}
+
+.skillItem:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    background-color: #f9f9f9; /* Very light grey background on hover */
+}
+
+.icon {
+    font-size: 3rem; /* Adjusted icon size */
+    color: #3498db; /* Soft blue icon color */
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease; /* Smooth icon transition */
+}
+
+.skillItem:hover .icon {
+    transform: scale(1.05); /* Slightly scale up icon on hover */
+}
+
+.skillName {
+    font-size: 1.5rem; /* Slightly smaller skill name */
+    margin-bottom: 0.5rem;
+    color: #34495e; /* Darker grey for skill names */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.skillItem:hover .skillName {
+    color: #2980b9; /* Change skill name color to a softer blue on hover */
+}
+
+.progressBar {
+    background-color: #e0e0e0; /* Light grey progress bar background */
+    border-radius: 10px;
+    overflow: hidden;
+    height: 1.5rem; /* Height of progress bar */
+    margin: 1rem 0; /* Margin for spacing */
+}
+
+.progress {
+    height: 100%;
+    background-color: #3498db; /* Soft blue for progress */
+    border-radius: 10px;
+    transition: width 0.5s ease; /* Smooth width transition */
+}
+
+.level {
+    font-size: 1rem; /* Standard font size for levels */
+    color: #7f8c8d; /* Subtle grey for level text */
+    margin-top: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .skillItem {
+        padding: 1.5rem; /* Reduce padding on smaller screens */
+    }
+}

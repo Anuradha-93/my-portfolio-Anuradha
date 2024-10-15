@@ -1,0 +1,18 @@
+/* src/assets/styles/variables.module.css */
+
+:root {
+    --primary-color: #474314;
+    --secondary-color: #ffffff;
+    --background-color: #f9f9f9;
+    --text-color: #333333;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+  }
+  

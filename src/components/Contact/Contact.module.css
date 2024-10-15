@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7f6;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.label {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #28a745;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Alert Box Styles for Success and Error Messages */
+.alert {
+  position: relative;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.alert.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Success Message */
+.successMessage {
+  background-color: #28a745;
+  color: whitesmoke;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+}
+
+/* Error Message */
+.errorMessage {
+  background-color: #e74c3c;
+  color: whitesmoke;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+}
+
+/* Animating Alerts with Slide-in */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert.show {
+  animation: slide-in 0.5s ease-in-out;
+}
