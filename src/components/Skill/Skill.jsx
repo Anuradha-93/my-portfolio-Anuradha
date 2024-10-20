@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaJsSquare, FaReact, FaCss3Alt, FaNodeJs, FaGitAlt, FaPhp, FaHtml5 } from 'react-icons/fa'; // Importing icons
-import styles from './skill.module.css';
+import styles from './Skill.module.css';
 
 const skillsData = [
   { name: 'HTML', level: 85, icon: <FaHtml5 /> },

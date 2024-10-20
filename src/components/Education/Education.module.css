@@ -1,13 +1,24 @@
 /* Education.module.css */
+:root {
+  --primary-color: #474314;
+  --secondary-color: #ffffff;
+  --background-color: #f9f9f9;
+  --text-color: #333333;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .education {
   padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(135deg, #e2f0fb, #fff);
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   position: relative; /* For positioning the pseudo-element */
   overflow: hidden; /* To hide any overflow of the animated background */
+  color:rgb(255, 255, 255);
 }
-
+.education h3{
+  color: rgb(7, 100, 53);
+}
 .education::before {
   content: '';
   position: absolute;
@@ -41,8 +52,9 @@
   z-index: 1; /* Ensure items are on top of the background */
 }
 
+
 .educationItem {
-  background-color: var(--background-color);
+  background-color: white;
   padding: 2.5rem 2rem;
   border-radius: 15px;
   border: 1px solid var(--border-color);
@@ -73,7 +85,7 @@
 
 .degree {
   font-size: 1.2rem;
-  color: yellowgreen;
+  color: rgb(13, 144, 131);
   margin: 0.5rem 0;
 }
 
@@ -86,7 +98,7 @@
 
 .description {
   font-size: 1rem;
-  color: var(--subtext-color);
+  color: palevioletred;
   line-height: 1.6;
   margin-top: 1rem; /* Add margin for better spacing */
 }
@@ -105,7 +117,7 @@
 }
 
 .expanded {
-  background-color: #e7f9f2; /* Light green background for expanded items */
+  background-color: rgb(241, 241, 124); /* Light green background for expanded items */
 }
 
 /* Media Queries */
