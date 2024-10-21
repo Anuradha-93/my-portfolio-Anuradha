@@ -1,6 +1,6 @@
 /* Card Styling */
 .card {
-  background-color: #ffffff; /* White background for a clean look */
+  background-color:  	#d7eaee;; /* White background for a clean look */
   border-radius: 20px; /* Increased rounding for a softer appearance */
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
@@ -31,7 +31,7 @@
 /* Info Section */
 .info {
   padding: 2rem; /* Increased padding for better spacing */
-  background-color: #f0f4f8; /* Softer, lighter background color for contrast */
+  background-color:  	#d7eaee; /* Softer, lighter background color for contrast */
 }
 
 .info h3 {

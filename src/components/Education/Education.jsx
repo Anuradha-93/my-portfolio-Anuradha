@@ -13,7 +13,7 @@ const educationData = [
     year: '2017 - 2020',
     description:
       'Focused on software development, algorithms, and data structures. Completed a capstone project on machine learning applications in web development.',
-    logo: 'public/assets/images/mcm.jpg', // Replace with actual logo URLs
+    logo: 'public/assets/mcm.jpg', // Replace with actual logo URLs
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const educationData = [
     year: '2020 - 2022',
     description:
       'Graduated with honors. Active member of the computer club and participated in regional science fairs.',
-    logo: 'public/assets/images/PGGC.jpg',
+    logo: 'public/assets/PGGC.jpg',
   },
   // Add more education items as needed
 ];

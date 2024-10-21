@@ -1,27 +1,53 @@
+/* General Styles for Responsiveness */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Default for larger screens */
+}
+
+/* Container Styles */
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f4f7f6;
+  min-height: 100vh; /* Ensures it adapts to smaller screens */
+  background-image: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
   font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+  padding: 20px; /* Added padding for smaller screens */
 }
 
+/* Form Styles */
 .form {
-  background-color: #fff;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  backdrop-filter: blur(15px);
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 100%; /* Set width to 100% for responsiveness */
+  max-width: 400px;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+  margin-top: 20px;
 }
 
+.form:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive Typography */
 .title {
   margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
+  font-size: 2.5rem; /* Reduced font-size for smaller screens */
+  color: whitesmoke;
 }
 
+/* Label Styles */
 .label {
   display: block;
   text-align: left;
@@ -29,6 +55,7 @@
   color: #666;
 }
 
+/* Input Styles */
 .input {
   width: 100%;
   padding: 12px;
@@ -36,90 +63,130 @@
   border-radius: 5px;
   border: 1px solid #ddd;
   font-size: 16px;
-  transition: border-color 0.3s;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .input:focus {
   border-color: #28a745;
 }
 
+/* Textarea Styles */
 .textarea {
   min-height: 100px;
   resize: vertical;
 }
 
+/* Button Styles */
 .button {
   width: 100%;
   padding: 12px;
-  background-color: #28a745;
+  background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
-  background-color: #218838;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(-225deg, #FF719A  0%, #FFA99F 50%,#FFE29F 100%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 /* Alert Box Styles for Success and Error Messages */
 .alert {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
   padding: 20px;
-  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
   border-radius: 5px;
   font-size: 18px;
   font-weight: bold;
   opacity: 0;
-  transform: translateY(-10px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 2;
+  text-align: center;
 }
 
-.alert.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.alert .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: inherit;
-}
-
-/* Success Message */
+/* Success Message Box */
 .successMessage {
-  background-color: #28a745;
+  background-color: rgba(76, 175, 80, 0.9);
   color: whitesmoke;
-  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 18px;
 }
 
-/* Error Message */
-.errorMessage {
-  background-color: #e74c3c;
-  color: whitesmoke;
-  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
-}
-
-/* Animating Alerts with Slide-in */
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+/* Responsive Typography Adjustments */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Slightly smaller base font size */
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .form {
+    padding: 20px; /* Less padding on smaller screens */
+    width: 90%; /* Make form narrower */
+  }
+
+  .button {
+    padding: 10px; /* Smaller button padding */
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 2rem; /* Reduce title size for smaller screens */
+  }
+
+  .alert {
+    font-size: 16px; /* Smaller font for alert */
+  }
+
+  .successMessage {
+    padding: 15px; /* Smaller padding for success message */
+    font-size: 16px;
   }
 }
 
-.alert.show {
-  animation: slide-in 0.5s ease-in-out;
+/* Small Devices (phones, 480px and below) */
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  .form {
+    padding: 15px;
+    width: 100%; /* Full width on very small screens */
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .alert {
+    font-size: 14px;
+  }
+
+  .successMessage {
+    font-size: 14px;
+  }
 }

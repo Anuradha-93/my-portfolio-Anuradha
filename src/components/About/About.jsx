@@ -10,7 +10,7 @@ const About = () => {
         <h2>About Me</h2>
         <div className={styles.content}>
           <img
-            src="public/assets/images/Profile.png" // Replace with your image path
+            src="public/assets/Profile.png" // Replace with your image path
             alt="Profile"
             className={styles.profilePic}
           />

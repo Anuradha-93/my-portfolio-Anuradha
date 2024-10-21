@@ -1,14 +1,14 @@
 /* Projects Section Styling */
 .projects {
   padding: 4rem 2rem;
-  background: #eaeef1; /* Soft light background for a calming effect */
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); /* Soft light background for a calming effect */
   text-align: center;
   position: relative;
 }
 
 /* Section Heading */
 .projects h2 {
-  color: #333; /* Dark grey for better readability */
+  color: white; /* Dark grey for better readability */
   font-size: 2.5rem; /* Optimal font size for heading */
   margin-bottom: 2rem;
   font-weight: 700; /* Bold for emphasis */
