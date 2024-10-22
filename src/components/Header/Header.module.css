@@ -83,6 +83,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: color var(--transition-speed) ease, transform 0.2s ease;
+  color: #ecf0f1;
 }
 
 .navLinks li a:hover,
