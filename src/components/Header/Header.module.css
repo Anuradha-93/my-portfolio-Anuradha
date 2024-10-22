@@ -1,16 +1,16 @@
 :root {
-  --primary-color: #1e90ff; /* Bright blue for better contrast */
-  --secondary-color: #2c3e50; /* Darker background */
-  --text-color: #ecf0f1; /* Lighter text color for readability */
-  --text-light: #bdc3c7; /* Even lighter variant for subtle text */
-  --background-transparent: rgba(44, 62, 80, 0.0); /* Transparent dark background */
-  --background-scrolled: #34495e; /* Darker background on scroll */
-  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for contrast */
+  --primary-color: #1e90ff;
+  --secondary-color: #2c3e50;
+  --text-color: #ecf0f1;
+  --text-light: #bdc3c7;
+  --background-transparent: rgba(44, 62, 80, 0.0);
+  --background-scrolled: #34495e;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   --transition-speed: 0.3s;
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Global Styles for Consistency */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +19,8 @@
 
 body {
   font-family: var(--font-family);
-  background-color: #1c1f24; /* Darker background for dark theme */
-  color: var(--text-color); /* Default text color */
+  background-color: #1c1f24;
+  color: var(--text-color);
 }
 
 /* Header Styles */
@@ -33,14 +33,15 @@ body {
   z-index: 1000;
 }
 
-/* Header Background After Scrolling */
 .header.scrolled {
-  background-color:white;
+  background-color: white;
   box-shadow: var(--box-shadow);
 }
+
 .header.scrolled .navLinks li a {
   color: #2c3e50;
 }
+
 /* Navbar Container */
 .navbar {
   display: flex;
@@ -49,7 +50,7 @@ body {
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  
+}
 
 /* Logo Styles */
 .logo a {
@@ -64,21 +65,21 @@ body {
   color: var(--primary-color);
 }
 
-/* Navigation Links Container */
+/* Navigation Links */
 .navLinks {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  
 }
-}
-.header.scrolled .logo a{
+
+.header.scrolled .logo a {
   color: #2c3e50;
 }
-/* Individual Navigation Link Styles */
+
+/* Nav Link Styles */
 .navLinks li a {
   text-decoration: none;
-  color: #ecf0f1;;
+  color: var(--text-color);
   font-weight: 500;
   cursor: pointer;
   transition: color var(--transition-speed) ease, transform 0.2s ease;
@@ -91,7 +92,7 @@ body {
   outline: none;
 }
 
-/* Hamburger Menu Icon */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -99,24 +100,24 @@ body {
   font-size: 1.5rem;
   transition: color var(--transition-speed) ease;
 }
-.header.scrolled .hamburger{
-  color:#2c3e50;
+
+.header.scrolled .hamburger {
+  color: #2c3e50;
 }
+
 .hamburger:hover,
 .hamburger:focus {
   color: var(--primary-color);
   outline: none;
 }
 
-
-/* Responsive Styles for Mobile Devices */
+/* Responsive Styles */
+/* Mobile Styles for Small Devices */
 @media (max-width: 768px) {
-  /* Show Hamburger Icon */
   .hamburger {
     display: block;
   }
 
-  /* Hide Navigation Links by Default */
   .navLinks {
     position: fixed;
     top: 0;
@@ -131,20 +132,74 @@ body {
     box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
   }
 
-  /* Show Navigation Links When Active */
   .navLinks.active {
     right: 0;
   }
 
-  /* Navigation Links Spacing in Mobile */
   .navLinks li {
     margin: 1.5rem 0;
   }
 
-  /* Increase Font Size for Mobile Navigation Links */
   .navLinks li a {
     font-size: 1.25rem;
     color: var(--text-light);
+  }
+}
+
+/* Tablet Styles for Mid-Range Devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  .navLinks li a {
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop Styles for Larger Devices */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .navbar {
+    padding: 1rem 3rem;
+  }
+
+  .logo a {
+    font-size: 1.75rem;
+  }
+
+  .navLinks li a {
+    font-size: 1.1rem;
+  }
+
+  .hamburger {
+    font-size: 1.5rem;
+  }
+}
+
+/* Extra Large Devices */
+@media (min-width: 1441px) {
+  .navbar {
+    padding: 1rem 4rem;
+  }
+
+  .logo a {
+    font-size: 2rem;
+  }
+
+  .navLinks li a {
+    font-size: 1.25rem;
+  }
+
+  .hamburger {
+    font-size: 1.75rem;
   }
 }
 
